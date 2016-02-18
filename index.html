@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Bernadette Engleman">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Kill The Fly Game</title>
+</head>
+
+<body>
+
+<!-- Home -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://www.bernadetteengleman.com/">Home</a>
+            <a class="navbar-brand" href="fly.html">Reset</a>
+        </div>
+    </div>
+</nav>
+
+<section>
+    <div class="container" id="flyarea">
+        <h1 class="text-center titleFont">Kill The Fly Game</h1>
+        <p class="text-center messageFont">You have 30 seconds to click the fly as much as you can.</p>
+
+        <h4 class="text-center" id="hideEnd">Number of click: <strong><span id="counter">0</span></strong>
+            &nbsp; &nbsp;
+            Time Left: <strong><span id="countDown">30</span></strong> sec</h4>
+
+        <!-- Start Button -->
+        <p style="text-align:center;"><img src="start.png" alt="START" style="width:80px" onclick="start()" id="startButton"></p>
+
+        <!-- Fly -->
+        <div id="box">
+            <p style="text-align:center;"><img src="fly.png" alt="Fly" style="width:30px" onclick="onClick()" id="fly"></p>
+        </div>
+
+        <!-- Game is Over -->
+        <div class="text-center" id="over">
+            <p class="titleFont">Game Over</p>
+            <h4>You clicked the fly <strong><span id="counter2">0</span></strong> times!</h4>
+        </div>
+
+    </div>
+</section>
+
+<footer class="container-fluid text-center">
+    <p>Copyright © <span id="year"></span> Bernadette Engleman. All rights reserved.</p>
+</footer>
+
+<script type="text/javascript" src="fly.js"></script>
+
+</body>
+
+</html>
+
