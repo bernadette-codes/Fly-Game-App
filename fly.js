@@ -1,10 +1,10 @@
 /**
- * Created by Bernadette on 3/7/2016.
+ * Created by Bernadette on 3/26/2016.
  */
 
 // Copyright Year
-var d = new Date();
-var n = d.getFullYear();
+var d = new Date(),
+    n = d.getFullYear();
 document.getElementById("year").innerHTML = n;
 
 //Window height
@@ -25,10 +25,9 @@ function onClick() {
 }
 
 // 30 Sec Timer
-var timeLeft = 30;
-var elem = document.getElementById("countDown");
-
-var timerId = setInterval(countdown, 1000);
+var timeLeft = 30,
+    elem = document.getElementById("countDown"),
+    timerId = setInterval(countdown, 1000);
 
 function countdown() {
     if (timeLeft == 0) {
