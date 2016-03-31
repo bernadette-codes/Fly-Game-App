@@ -1,5 +1,5 @@
 /**
- * Created by Bernadette on 3/26/2016.
+ * Created by Bernadette on 3/30/2016.
  */
 
 // Copyright Year
@@ -7,17 +7,21 @@ var d = new Date(),
     n = d.getFullYear();
 document.getElementById("year").innerHTML = n;
 
-//Window height
-$(document).ready(function(){
-    var windowHeight=$(window).height();
-    $(window).height(windowHeight+"px");
+//Variables
+var windowHeight=$(window).height(),
+    windowWidth=$(window).width(),
+    click = 0,
+    timeLeft = 30,
+    elem = document.getElementById("countDown"),
+    timerId = setInterval(countdown, 1000);
 
-    var windowWidth=$(window).width();
+// Window height
+$(document).ready(function(){
+    $(window).height(windowHeight+"px");
     //alert(windowWidth);
 });
 
 // Click counter
-var click = 0;
 function onClick() {
     click += 1;
     document.getElementById("counter").innerHTML = click;
@@ -25,10 +29,6 @@ function onClick() {
 }
 
 // 30 Sec Timer
-var timeLeft = 30,
-    elem = document.getElementById("countDown"),
-    timerId = setInterval(countdown, 1000);
-
 function countdown() {
     if (timeLeft == 0) {
         clearTimeout(timerId);
