@@ -14,7 +14,7 @@
 
 <body>
 
-<!-- Home -->
+<!-- Home Link -->
 <nav class="navbar container-fluid">
     <div class="navbar-header">
         <a class="navbar-brand" href="http://www.bernadetteengleman.com/">Home</a>
@@ -24,11 +24,16 @@
 
 <section class="container" id="flyarea">
 
+    <!-- Title -->
     <h1 class="text-center titleFont" unselectable="on">Kill The Fly Game</h1>
+
+    <!-- Instructions -->
     <p class="text-center messageFont" unselectable="on">You have 30 seconds to click the fly as much as you can.</p>
 
+    <!-- Counter -->
     <h4 class="text-center" id="hideEnd" unselectable="on">Number of click: <strong><span id="counter">0</span></strong>
         &nbsp; &nbsp;
+        <!-- Timer -->
         Time Left: <strong><span id="countDown">30</span></strong> sec</h4>
 
     <!-- Start Button -->
@@ -39,8 +44,8 @@
         <p style="text-align:center;"><img src="fly.png" alt="Fly" style="width:30px" onclick="onClick()" id="fly" unselectable="on"></p>
     </div>
 
-    <!-- Game is Over -->
     <div class="text-center" id="over">
+        <!-- Game Over -->
         <p class="titleFont" unselectable="on">Game Over</p>
         <h4 unselectable="on">You clicked the fly <strong><span id="counter2">0</span></strong> times!</h4>
     </div>
