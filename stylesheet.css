@@ -15,46 +15,51 @@ body {
     user-select: none;
 }
 
+/* Home Link & reset */
 nav.navbar {
     min-height: 32px;
 }
 
-nav.navbar div.navbar-header a.navbar-brand {
-    padding-top: 5px;
-    padding-bottom:0;
-    height: 32px;
-}
-
-section {
-    padding-bottom: 0;
-    margin: 0 0 10px;
-}
-
-nav.navbar div.navbar-header a {
+a.navbar-brand {
     font-size: 1.25em;
     color: #404040;
     background-color: #ffffff;
     margin: 5px;
-    padding: 8px;
+    padding: 5px 8px 0;
     border-radius: 7px;
     border: 1px solid #404040;
+    height: 32px;
 }
 
-nav.navbar div.navbar-header a:hover {
+
+a.navbar-brand:hover {
     color: #fff;
     background-color: #404040;
 }
 
+/* Content */
+.flyarea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto 10px;
+    padding-bottom: 0;
+    cursor: url(swatter2.png), crosshair;
+}
+
+/*  Kill The Fly Title */
 .titleFont {
     font-size: 2.2em;
 }
 
-section#flyarea p.messageFont {
+/*  Instruction */
+.messageFont {
     font-size: 1.2em;
     padding-left: 15px;
     padding-right: 15px;
 }
 
+/*  Hide Counter & Timer at the end */
 #hideEnd {
     margin-top: 20px;
     display: none;
@@ -65,15 +70,17 @@ section#flyarea p.messageFont {
     user-select: none;
 }
 
-#flyarea {
-    cursor: url(swatter2.png), crosshair;
+.start {
+    text-align:center;
 }
 
-p img#startButton {
+#startButton {
+    width: 80px;
     padding: 50px 0;
     cursor: pointer;
 }
 
+/* Fly Area */
 #box {
     position: relative;
     margin: 0 auto -150px;
@@ -88,9 +95,14 @@ p img#startButton {
     padding-bottom: 0;
 }
 
+#box p {
+    text-align:center;
+}
+
 #fly {
     position: absolute;
     display: block;
+    width:30px;
     -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
     -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
     -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
@@ -127,7 +139,8 @@ p img#startButton {
     from { top: 0; } to { top: 270px; }
 }
 
-section#flyarea div#over {
+/* Game Over */
+#over {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -149,24 +162,29 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
+    /*  Kill The Fly Title */
     .titleFont {
         font-size: 2em;
     }
-    section#flyarea p.messageFont {
+    /*  Instruction */
+    .messageFont {
         font-size: 1em;
     }
+    /* Fly Area */
     #box {
         top: -135px;
     }
 }
 
 @media screen and (max-width: 380px) {
-    div.navbar-header a.navbar-brand {
+    a.navbar-brand {
         font-size: 1em;
     }
+    /*  Kill The Fly Title */
     .titleFont {
         font-size: 1.8em;
     }
+    /* Fly Area */
     #box {
         top: -140px;
     }
