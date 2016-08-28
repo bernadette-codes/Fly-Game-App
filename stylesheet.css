@@ -75,7 +75,6 @@ a.navbar-brand:hover {
 }
 
 #startButton {
-    width: 80px;
     padding: 50px 0;
     cursor: pointer;
 }
@@ -102,7 +101,6 @@ a.navbar-brand:hover {
 #fly {
     position: absolute;
     display: block;
-    width:30px;
     -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
     -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
     -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
