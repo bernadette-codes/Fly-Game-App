@@ -8,7 +8,7 @@ html {
 
 body {
     display: block;
-    background: url(background.jpg) center center / cover no-repeat fixed;
+    background: url(img/background.jpg) center center / cover no-repeat fixed;
     padding: 0;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -44,7 +44,7 @@ a.navbar-brand:hover {
     right: 0;
     margin: 0 auto 10px;
     padding-bottom: 0;
-    cursor: url(swatter2.png), crosshair;
+    cursor: url(img/swatter2.png), crosshair;
 }
 
 /*  Kill The Fly Title */
@@ -90,7 +90,7 @@ a.navbar-brand:hover {
     background-color: transparent;
     overflow: hidden;
     visibility: hidden;
-    cursor: url(swatter2.png), crosshair;
+    cursor: url(img/swatter2.png), crosshair;
     padding-bottom: 0;
 }
 
