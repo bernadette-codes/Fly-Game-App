@@ -1,4 +1,3 @@
-
 // Copyright Year
 var d = new Date(),
     n = d.getFullYear();
@@ -11,36 +10,6 @@ var windowHeight=$(window).height(),
     timeLeft = 30,
     elem = document.getElementById("countDown"),
     timerId = setInterval(countdown, 1000);
-
-// Window height
-$(document).ready(function(){
-    $(window).height(windowHeight+"px");
-    //alert(windowWidth);
-});
-
-//Body Not Selectable
-window.onload = function() {
-    document.body.onselectstart = function() {
-        return false;
-    }
-};
-
-// Click counter
-function onClick() {
-    click += 1;
-    document.getElementById("counter").innerHTML = click;
-    document.getElementById("counter2").innerHTML = click;
-}
-
-// 30 Sec Timer
-function countdown() {
-    if (timeLeft == 0) {
-        clearTimeout(timerId);
-    } else {
-        elem.innerHTML = timeLeft;
-        timeLeft--;
-    }
-}
 
 // Game
 function start() {
@@ -56,3 +25,33 @@ function start() {
         document.getElementById("hideEnd").style.display="none";
     }
 }
+
+// 30 Sec Timer
+function countdown() {
+    if (timeLeft == 0) {
+        clearTimeout(timerId);
+    } else {
+        elem.innerHTML = timeLeft;
+        timeLeft--;
+    }
+}
+
+// Click counter
+function onClick() {
+    click += 1;
+    document.getElementById("counter").innerHTML = click;
+    document.getElementById("counter2").innerHTML = click;
+}
+
+// Window height
+$(document).ready(function(){
+    $(window).height(windowHeight+"px");
+    //alert(windowWidth);
+});
+
+//Body Not Selectable
+window.onload = function() {
+    document.body.onselectstart = function() {
+        return false;
+    }
+};
