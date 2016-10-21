@@ -11,13 +11,14 @@ var windowHeight=$(window).height(),
     elem = document.getElementById("countDown"),
     timerId = setInterval(countdown, 1000);
 
-// Game
+// Start Game
 function start() {
     document.getElementById("startButton").style.visibility="hidden";
     document.getElementById("box").style.visibility="visible";
     document.getElementById("fly").style.visibility="visible";
     document.getElementById("hideEnd").style.display="block";
 
+    // End Game
     myVar = setTimeout(timer, 30000);
     function timer() {
         document.getElementById("over").style.visibility="visible";
@@ -39,7 +40,9 @@ function countdown() {
 // Click counter
 function onClick() {
     click += 1;
+    // Displayed Counter
     document.getElementById("counter").innerHTML = click;
+    // End Game Click Status
     document.getElementById("counter2").innerHTML = click;
 }
 
