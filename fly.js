@@ -4,8 +4,8 @@ var d = new Date(),
 document.getElementById("year").innerHTML = n;
 
 //Variables
-var windowHeight=$(window).height(),
-    windowWidth=$(window).width(),
+var windowHeight = $(window).height(),
+    windowWidth = $(window).width(),
     click = 0,
     timeLeft = 30,
     elem = document.getElementById("countDown"),
@@ -13,17 +13,17 @@ var windowHeight=$(window).height(),
 
 // Start Game
 function start() {
-    document.getElementById("startButton").style.visibility="hidden";
-    document.getElementById("box").style.visibility="visible";
-    document.getElementById("fly").style.visibility="visible";
-    document.getElementById("hideEnd").style.display="block";
+    document.getElementById("startButton").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "visible";
+    document.getElementById("fly").style.visibility = "visible";
+    document.getElementById("hideEnd").style.display = "block";
 
     // End Game
     myVar = setTimeout(timer, 30000);
     function timer() {
-        document.getElementById("over").style.visibility="visible";
-        document.getElementById("fly").style.visibility="hidden";
-        document.getElementById("hideEnd").style.display="none";
+        document.getElementById("over").style.visibility = "visible";
+        document.getElementById("fly").style.visibility = "hidden";
+        document.getElementById("hideEnd").style.display = "none";
     }
 }
 
