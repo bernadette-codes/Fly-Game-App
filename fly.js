@@ -9,21 +9,23 @@ var windowHeight = $(window).height(),
     click = 0,
     timeLeft = 30,
     elem = document.getElementById("countDown"),
-    timerId = setInterval(countdown, 1000);
+    timerId = setInterval(countdown, 1000),
+    fly = document.getElementById("fly"),
+    hideEnd = document.getElementById("hideEnd");
 
 // Start Game
 function start() {
     document.getElementById("startButton").style.visibility = "hidden";
     document.getElementById("box").style.visibility = "visible";
-    document.getElementById("fly").style.visibility = "visible";
-    document.getElementById("hideEnd").style.display = "block";
+    fly.style.visibility = "visible";
+    hideEnd.style.display = "block";
 
     // End Game
     myVar = setTimeout(timer, 30000);
     function timer() {
         document.getElementById("over").style.visibility = "visible";
-        document.getElementById("fly").style.visibility = "hidden";
-        document.getElementById("hideEnd").style.display = "none";
+        fly.style.visibility = "hidden";
+        hideEnd.style.display = "none";
     }
 }
 
