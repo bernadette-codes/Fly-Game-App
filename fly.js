@@ -40,10 +40,12 @@ function countdown() {
 // Click counter
 function onClick() {
     click += 1;
+    var counter = document.getElementById("counter"),
+        counter2 = document.getElementById("counter2");
     // Displayed Counter
-    document.getElementById("counter").innerHTML = click;
+    counter.innerHTML = click;
     // End Game Click Status
-    document.getElementById("counter2").innerHTML = click;
+    counter2.innerHTML = click;
 }
 
 // Window height
