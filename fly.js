@@ -26,8 +26,8 @@ function start() {
         document.getElementById("over").style.visibility = "visible";
         fly.style.visibility = "hidden";
         hideEnd.style.display = "none";
-    }
-}
+    } // end timer
+} // end start
 
 // 30 Sec Timer
 function countdown() {
@@ -37,7 +37,7 @@ function countdown() {
         elem.innerHTML = timeLeft;
         timeLeft--;
     }
-}
+} // end countdown
 
 // Click counter
 function onClick() {
