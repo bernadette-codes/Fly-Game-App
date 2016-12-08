@@ -8,8 +8,8 @@ var windowHeight = $(window).height(),
     windowWidth = $(window).width(),
     click = 0,
     timeLeft = 30,
-    elem = document.getElementById("countDown"),
     timerId = setInterval(countdown, 1000),
+    elem = document.getElementById("countDown"),
     fly = document.getElementById("fly"),
     hideEnd = document.getElementById("hideEnd");
 
@@ -42,12 +42,12 @@ function countdown() {
 // Click counter
 function onClick() {
     click += 1;
-    var counter = document.getElementById("counter"),
-        counter2 = document.getElementById("counter2");
+    var counter = $('#counter'),
+        counter2 = $('#counter2');
     // Displayed Counter
-    counter.innerHTML = click;
+    counter.html(click);
     // End Game Click Status
-    counter2.innerHTML = click;
+    counter2.html(click);
 }
 
 // Window height
