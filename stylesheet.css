@@ -61,6 +61,7 @@ a.navbar-brand:hover {
 
 /*  Hide Counter & Timer at the end */
 #hideEnd {
+    font-size: 1.3em;
     margin-top: 20px;
     display: none;
     -webkit-touch-callout: none;
@@ -82,20 +83,14 @@ a.navbar-brand:hover {
 /* Fly Area */
 #box {
     position: relative;
-    margin: 0 auto -150px;
-    width: 300px;
-    height: 300px;
-    top: -140px;
+    margin: 0 auto;
+    width: 400px;
+    top: -110px;
     bottom: 0;
     background-color: transparent;
     overflow: hidden;
     visibility: hidden;
     cursor: url(img/swatter2.png), crosshair;
-    padding-bottom: 0;
-}
-
-#box p {
-    text-align:center;
 }
 
 #fly {
@@ -113,28 +108,28 @@ a.navbar-brand:hover {
 }
 
 @-webkit-keyframes moveX {
-    from { left: 0; } to { left: 270px; }
+    from { left: 0; } to { left: 250px; }
 }
 @-moz-keyframes moveX {
-    from { left: 0; } to { left: 270px; }
+    from { left: 0; } to { left: 250px; }
 }
 @-o-keyframes moveX {
-    from { left: 0; } to { left: 270px; }
+    from { left: 0; } to { left: 250px; }
 }
 @keyframes moveX {
-    from { left: 0; } to { left: 270px; }
+    from { left: 0; } to { left: 250px; }
 }
 @-webkit-keyframes moveY {
-    from { top: 0; } to { top: 270px; }
+    from { top: 0; } to { top: 250px; }
 }
 @-moz-keyframes moveY {
-    from { top: 0; } to { top: 270px; }
+    from { top: 0; } to { top: 250px; }
 }
 @-o-keyframes moveY {
-    from { top: 0; } to { top: 270px; }
+    from { top: 0; } to { top: 250px; }
 }
 @keyframes moveY {
-    from { top: 0; } to { top: 270px; }
+    from { top: 0; } to { top: 250px; }
 }
 
 /* Game Over */
@@ -151,6 +146,10 @@ a.navbar-brand:hover {
     cursor: pointer;
 }
 
+#over p:last-child {
+    font-size: 1.3em;
+}
+
 footer {
     position: absolute;
     left: 0;
@@ -159,6 +158,7 @@ footer {
     width: 100%;
 }
 
+/* Media Queries */
 @media screen and (max-width: 550px) {
     /*  Kill The Fly Title */
     .titleFont {
@@ -166,7 +166,8 @@ footer {
     }
     /*  Instruction */
     .messageFont {
-        font-size: 1em;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     /* Fly Area */
     #box {
@@ -174,7 +175,92 @@ footer {
     }
 }
 
-@media screen and (max-width: 380px) {
+/* Warning for Too Small Screen */
+.fail {
+    background: url(img/biggerScreen.jpg) center center / 300px no-repeat fixed;
+    width:100%;
+    height:100%;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    visibility: hidden;
+}
+
+/** Media Queries **/
+@media screen and (max-width: 550px) {
+    @-webkit-keyframes moveX {
+        from { left: 0; } to { left: 235px; }
+    }
+    @-moz-keyframes moveX {
+        from { left: 0; } to { left: 235px; }
+    }
+    @-o-keyframes moveX {
+        from { left: 0; } to { left: 235px; }
+    }
+    @keyframes moveX {
+        from { left: 0; } to { left: 235px; }
+    }
+    @-webkit-keyframes moveY {
+        from { top: 0; } to { top: 220px; }
+    }
+    @-moz-keyframes moveY {
+        from { top: 0; } to { top: 220px; }
+    }
+    @-o-keyframes moveY {
+        from { top: 0; } to { top: 220px; }
+    }
+    @keyframes moveY {
+        from { top: 0; } to { top: 220px; }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Fly Area */
+    #box {
+        width: 350px;
+    }
+    @-webkit-keyframes moveX {
+        from { left: 0; } to { left: 220px; }
+    }
+    @-moz-keyframes moveX {
+        from { left: 0; } to { left: 220px; }
+    }
+    @-o-keyframes moveX {
+        from { left: 0; } to { left: 220px; }
+    }
+    @keyframes moveX {
+        from { left: 0; } to { left: 220px; }
+    }
+    @-webkit-keyframes moveY {
+        from { top: 0; } to { top: 200px; }
+    }
+    @-moz-keyframes moveY {
+        from { top: 0; } to { top: 200px; }
+    }
+    @-o-keyframes moveY {
+        from { top: 0; } to { top: 200px; }
+    }
+    @keyframes moveY {
+        from { top: 0; } to { top: 200px; }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Fly Area */
+    #box {
+        width: 300px;
+    }
+    /* Counter */
+    #hideEnd {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 350px) {
     a.navbar-brand {
         font-size: 1em;
     }
@@ -184,6 +270,7 @@ footer {
     }
     /* Fly Area */
     #box {
+        width: 270px;
         top: -140px;
     }
 }
