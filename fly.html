@@ -9,6 +9,7 @@
     <meta name="description" content="game objective is to click the moving fly as much as you can within 30 seconds">
     <meta name="keywords" content="fly game, click game">
     <meta name="author" content="Bernadette Engleman">
+    <link rel="shortcut icon" href="../../img/beIcon.png">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
@@ -17,41 +18,42 @@
 
 <!-- Home Link -->
 <nav class="navbar container-fluid">
-    <a class="navbar-brand" href="http://www.bernadetteengleman.com/">Home</a>
+    <a class="navbar-brand" href="../../index.html">Home</a>
     <a class="navbar-brand" href="fly.html">Reset</a>
 </nav>
 
-<main class="container flyarea">
-
+<header class="text-center">
     <!-- Title -->
-    <h1 class="text-center titleFont" unselectable="on">Kill The Fly Game</h1>
+    <h1 class="titleFont">Kill The Fly Game</h1>
 
     <!-- Instructions -->
-    <p class="text-center messageFont" unselectable="on">You have 30 seconds to click the fly as much as you can.</p>
+    <p class="messageFont">You have 30 seconds to click the fly as much as you can.</p>
 
     <!-- Counter -->
-    <h4 class="text-center" id="hideEnd" unselectable="on">Number of click: <strong><span id="counter">0</span></strong>
-        &nbsp; &nbsp;
+    <p id="hideEnd">Number of click: <strong><span id="counter">0</span></strong>&nbsp; &nbsp;
         <!-- Timer -->
-        Time Left: <strong><span id="countDown">30</span></strong> sec</h4>
+        Time Left: <strong><span id="countDown">30</span></strong> sec</p>
 
     <!-- Start Button -->
     <div class="start">
-        <img src="img/start.png" alt="START" onclick="start()" id="startButton" width="80" unselectable="on">
+        <img src="img/start.png" alt="START" onclick="start()" id="startButton" width="80">
     </div>
 
+    <div id="over">
+        <!-- Game Over -->
+        <p class="titleFont">Game Over</p>
+        <p>You clicked the fly <strong><span id="counter2">0</span></strong> times!</p>
+    </div>
+</header>
+
+<main class="container flyarea">
     <!-- Fly -->
     <div id="box">
-        <img src="img/fly.png" alt="Fly" onclick="onClick()" id="fly" width="30" unselectable="on">
+        <img src="img/fly.png" alt="Fly" onclick="onClick()" id="fly" width="30">
     </div>
-
-    <div class="text-center" id="over">
-        <!-- Game Over -->
-        <p class="titleFont" unselectable="on">Game Over</p>
-        <h4 unselectable="on">You clicked the fly <strong><span id="counter2">0</span></strong> times!</h4>
-    </div>
-
 </main>
+
+<div class="fail"></div>
 
 <footer class="container-fluid text-center">
      <p><small>Copyright © <span id="year"></span> Bernadette Engleman. All rights reserved.</small></p>
