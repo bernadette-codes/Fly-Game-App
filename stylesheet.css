@@ -85,7 +85,7 @@ a.navbar-brand:hover {
     position: relative;
     margin: 0 auto;
     width: 400px;
-    top: -110px;
+    top: 10px;
     bottom: 0;
     background-color: transparent;
     overflow: hidden;
@@ -158,23 +158,6 @@ footer {
     width: 100%;
 }
 
-/* Media Queries */
-@media screen and (max-width: 550px) {
-    /*  Kill The Fly Title */
-    .titleFont {
-        font-size: 2em;
-    }
-    /*  Instruction */
-    .messageFont {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    /* Fly Area */
-    #box {
-        top: -135px;
-    }
-}
-
 /* Warning for Too Small Screen */
 .fail {
     background: url(img/biggerScreen.jpg) center center / 300px no-repeat fixed;
@@ -192,6 +175,20 @@ footer {
 
 /** Media Queries **/
 @media screen and (max-width: 550px) {
+    /*  Kill The Fly Title */
+    .titleFont {
+        font-size: 2em;
+    }
+    /*  Instruction */
+    .messageFont {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    /* Fly Area */
+    #box {
+        top: 15px;
+    }
+
     @-webkit-keyframes moveX {
         from { left: 0; } to { left: 235px; }
     }
@@ -271,6 +268,6 @@ footer {
     /* Fly Area */
     #box {
         width: 270px;
-        top: -140px;
+        top: 40px;
     }
 }
