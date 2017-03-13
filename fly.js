@@ -17,24 +17,9 @@ var windowHeight = $(window).height(),
     $fly = document.getElementById("fly"),
     $hideEnd = document.getElementById("hideEnd");
 
-// Start Game
-function start() {
-    document.getElementById("startButton").style.visibility = "hidden";
-    document.getElementById("box").style.visibility = "visible";
-    $fly.style.visibility = "visible";
-    $hideEnd.style.display = "block";
-
-    // End Game
-    myVar = setTimeout(timer, 30000);
-    function timer() {
-        document.getElementById("over").style.visibility = "visible";
-        $fly.style.visibility = "hidden";
-        $hideEnd.style.display = "none";
-    } // end timer
-} // end start
 
 // Click counter
-function onClick() {
+function clickFly() {
     click += 1;
     var $counter = $('#counter'),
         $counter2 = $('#counter2');
@@ -56,6 +41,27 @@ function countdown() {
 
 $(document).ready(function(){
     //alert(windowWidth);
+
+    // Start Game
+    $('#startButton').on('click', function(){
+        $(this).hide();
+        $('#box').css('visibility', 'visible');
+        $($fly).css('visibility', 'visible');
+        $($hideEnd).css('display', 'block');
+
+        // End Game
+        myVar = setTimeout(timer, 30000);
+        function timer() {
+            $('#over').css('visibility', 'visible');
+            $($fly).css('visibility', 'hidden');
+            $($hideEnd).css('display', 'none');
+        } // end timer
+    }); // end startButton click
+
+    // Add to counter when fly is clicked
+    $($fly).on('click', function(){
+        clickFly();
+    });
 
     // Fly Area
     $box.css("height",(windowHeight - navHeight - headerHeight - footerHeight));
