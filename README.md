@@ -8,9 +8,8 @@ The objective of [Kill The Fly Game](http://www.bernadetteengleman.com/Apps/Fly-
 ![Kill The Fly Game Webpage](http://www.bernadetteengleman.com/img/portfolio/flythumbnail2.jpg)
 
 
- - Single-page, responsive web application game programmed with JavaScript
+ - Single-page, responsive web app programmed with jQuery
  - Utilizes CSS3 Animation and jQuery UI
-
 
 
 **Front-End:**
